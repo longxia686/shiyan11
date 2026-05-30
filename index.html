@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验十一 · 小球斜坡运动</title>
+    <link rel="stylesheet" href="lab11.css">
+</head>
+<body>
+    <div id="top"></div>
+    <a class="back-home" href="#top" aria-label="返回顶部">返回顶部</a>
+
+    <main class="lab11-page">
+        <header class="lab11-header">
+            <h1 class="lab11-title">实验十一 · 小球斜坡运动</h1>
+        </header>
+
+        <div class="lab11-stage-wrap" id="lab11-stage-wrap">
+            <section class="lab11-scene" aria-label="小球沿斜坡向下运动">
+                <div class="lab11-cloud lab11-cloud--1" aria-hidden="true"></div>
+                <div class="lab11-cloud lab11-cloud--2" aria-hidden="true"></div>
+                <div class="lab11-hill" aria-hidden="true"></div>
+
+                <div class="lab11-ramp-stand" aria-hidden="true"></div>
+                <div class="lab11-ramp-wrap" id="lab11-ramp-wrap">
+                    <div class="lab11-ramp">
+                        <span class="lab11-ramp-edge" aria-hidden="true"></span>
+                    </div>
+                    <div class="lab11-ball" id="lab11-ball" role="img" aria-label="红色小球"></div>
+                </div>
+            </section>
+            <button type="button" class="lab11-fs-btn" id="lab11-fullscreen" aria-label="切换全屏">全屏</button>
+        </div>
+
+        <div class="lab11-panel">
+            <div class="lab11-stats">
+                <span>速度：<strong id="lab11-speed">0.00</strong> px/帧</span>
+                <span>位移：<strong id="lab11-distance">0</strong> px</span>
+            </div>
+            <div class="lab11-controls">
+                <button type="button" class="lab11-btn lab11-btn--ghost" id="lab11-reset">重新开始</button>
+                <button type="button" class="lab11-btn" id="lab11-toggle">暂停</button>
+            </div>
+        </div>
+
+        <div class="lab11-panel lab11-panel--settings">
+            <label class="lab11-slider-row" for="lab11-rate">
+                <span class="lab11-slider-label">播放倍速</span>
+                <input type="range" class="lab11-range" id="lab11-rate" min="0.25" max="3" step="0.25" value="1">
+                <strong class="lab11-slider-value" id="lab11-rate-val">1.0×</strong>
+            </label>
+            <label class="lab11-slider-row" for="lab11-volume">
+                <span class="lab11-slider-label">滚动音量</span>
+                <input type="range" class="lab11-range" id="lab11-volume" min="0" max="100" step="1" value="65">
+                <strong class="lab11-slider-value" id="lab11-volume-val">65%</strong>
+            </label>
+        </div>
+
+        <div class="lab11-panel lab11-panel--sound">
+            <button type="button" class="lab11-btn lab11-btn--warn" id="lab11-mute">静音</button>
+            <button type="button" class="lab11-btn lab11-btn--success" id="lab11-unmute">取消静音</button>
+        </div>
+    </main>
+
+    <!-- 请将 lab11-001.js 重命名为 lab11-[学号后两位].js 并修改下方 src -->
+    <script src="lab11-001.js"></script>
+</body>
+</html>
